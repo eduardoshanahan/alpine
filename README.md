@@ -1,6 +1,9 @@
 # Docker image with  Alpine
 
+A basic Docker image based in Alpine. I am using this as a root for my other images.
+
 [TOC]
+
 ## Running an interactive session
 
 ```bash

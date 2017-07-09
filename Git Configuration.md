@@ -1,3 +1,5 @@
+[TOC]
+
 # Git configuration`
 
 Working with git using multiple accounts might be tricky.

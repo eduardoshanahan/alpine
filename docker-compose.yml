@@ -4,6 +4,6 @@ services:
 
   shell:
     image: eduardoshanahan/alpine:latest
-    container_name: es_alpine
+    container_name: eduardoshanahan_alpine
     entrypoint:
       - /bin/sh
