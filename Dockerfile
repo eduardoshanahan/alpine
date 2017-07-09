@@ -1,7 +1,7 @@
-FROM alpine:3.5
+FROM alpine:3.6
 
 MAINTAINER Eduardo Shanahan <contact@eduardoshanahan.com>
 
-RUN apk update 
+RUN apk update
 
 ENTRYPOINT ["/bin/sh"]
