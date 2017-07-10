@@ -44,7 +44,7 @@ Remember to replace the 'eduardo.mac.bitbucket' and 'eduardo.mac.github' with th
 
 ## Edit Git configuration
 
-Once you have your local git repository created and commited, and your remote is setup as well, you need to edit the local Git configuration.
+Once you have your local git repository created and committed, and your remote is setup as well, you need to edit the local Git configuration.
 
 Edit the file .git/config, and put the following details:
 
