@@ -1,3 +1,6 @@
 .git
-.bumpversion.cfg
+version.json
+.eslintrc.json
 README.md
+CHANGELOG.md
+"Git Configuration.md"

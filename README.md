@@ -2,8 +2,6 @@
 
 A basic Docker image based in Alpine. I am using this as a root for my other images.
 
-[TOC]
-
 ## Running an interactive session
 
 ```bash
@@ -17,10 +15,5 @@ Or with Docker Compose
 docker-compose run --rm shell
 ```
 
-## Development
 
-If you want to make some changes and version it, [bumpversion](https://pypi.python.org/pypi/bumpversion) is available
 
-```bash
-bumpversion patch
-```

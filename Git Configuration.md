@@ -1,6 +1,9 @@
-[TOC]
+# Table of Contents
+1. [Git Configuration](#gitintroduction)
+    1. [Configuring SSH keys](#configuringsshkeys)
+    2. [Edit SSH configuration](#editsshconfiguration)
 
-# Git configuration`
+## Git configuration <a name="gitintroduction"></a>
 
 Working with git using multiple accounts might be tricky.
 
@@ -10,7 +13,7 @@ There are three things that needs to be aligned:
 * The ssh configuration
 * The git repository configuration
 
-## Configuring the SSH keys
+### Configuring the SSH keys <a name="configuringsshkeys"></a>
 
 Create a key for each account:
 ```
@@ -22,7 +25,7 @@ Give it a name and an empty passphrase. In my case I created two keys, one for B
 
 but you can use any name that suits you.
 
-## Edit SSH configuration
+### Edit SSH configuration <a name="editsshconfiguration"></a>
 
 Edit the ~/.ssh/config file to associate the alias in git with the keys you just created:
 
@@ -42,7 +45,7 @@ Host github.com-eduardoshanahan
 
 Remember to replace the 'eduardo.mac.bitbucket' and 'eduardo.mac.github' with the names you selected when creating the keys.
 
-## Edit Git configuration
+### Edit Git configuration <a name=">
 
 Once you have your local git repository created and committed, and your remote is setup as well, you need to edit the local Git configuration.
 
