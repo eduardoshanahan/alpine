@@ -45,7 +45,7 @@ Host github.com-eduardoshanahan
 
 Remember to replace the 'eduardo.mac.bitbucket' and 'eduardo.mac.github' with the names you selected when creating the keys.
 
-### Edit Git configuration <a name=">
+### Edit Git configuration <a name="editgitconfiguration"></a>
 
 Once you have your local git repository created and committed, and your remote is setup as well, you need to edit the local Git configuration.
 
