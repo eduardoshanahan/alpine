@@ -5,7 +5,7 @@ A basic Docker image based in Alpine. I am using this as a root for my other ima
 ## Running an interactive session
 
 ```
-docker build . --t eduardoshanahan/alpine:latest
+docker build . -t eduardoshanahan/alpine:latest
 docker run -it --rm eduardoshanahan/alpine
 ```
 

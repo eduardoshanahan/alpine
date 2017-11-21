@@ -2,6 +2,7 @@
 1. [Git Configuration](#gitintroduction)
     1. [Configuring SSH keys](#configuringsshkeys)
     2. [Edit SSH configuration](#editsshconfiguration)
+    3. [Edit Git configuration](#editgitconfiguration)
 
 ## Git configuration <a name="gitintroduction"></a>
 
