@@ -15,5 +15,10 @@ Or with Docker Compose
 docker-compose run --rm shell
 ```
 
+## Development
 
-
+To send the commits to the remote server, you can use the script
+```bash
+./save.sh
+```
+which will also create a new tag if the version is updated.
