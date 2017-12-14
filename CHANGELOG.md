@@ -1,5 +1,9 @@
 # Changelog
 
+## [3.6.0.2] - 2017-12-14
+
+* Changed: updated and upgraded packages
+
 ## 2017-12-14
 
 * Changed: added a tag creation script
