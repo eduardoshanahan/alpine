@@ -1,5 +1,10 @@
 # Changelog
 
+
+## [3.7.0.1] - 2018-01-01
+
+* Changed: New Alpine base version
+
 ## [3.6.0.4] - 2018-01-01
 
 * Changed: Updated packages
