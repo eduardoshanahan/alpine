@@ -1,5 +1,9 @@
 # Changelog
 
+## [3.6.0.4] - 2018-01-01
+
+* Changed: Updated packages
+
 ## [3.6.0.3] - 2017-12-14
 
 * Fixed: Base image error
