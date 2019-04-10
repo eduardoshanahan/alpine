@@ -3,12 +3,13 @@ echo 'Pushing to bitbucket'
 git push bitbucket
 echo 'Pushing to github'
 git push github
-echo 'Verifying tag'
+echo 'Checking tag'
 if [ ! $(git tag -l $IMAGE_VERSION) ]; then
-    echo 'Clean up existing tag'
-    git tag delete $IMAGE_VERSION
+    echo 'Creating new tag'
+    git tag $IMAGE_VERSION
+    echo 'Pushing tags to bitbucket'
+    git push bitbucket --tags
+    echo 'Pushing tags to github'
+    git push github --tags
 fi
-echo 'Pushing tags to bitbucket'
-git push bitbucket --tags
-echo 'Pushing tags to github'
-git push github --tags
+    echo 'Tag already existing'
