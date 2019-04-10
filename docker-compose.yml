@@ -1,9 +1,30 @@
-version: "3"
+version: "3.7"
 
 services:
 
   shell:
     image: eduardoshanahan/alpine:latest
-    container_name: es_alpine
+    container_name: es_shell_alpine
+    stdin_open: true
+    tty: true
+    volumes:
+        - keys:/root/.ssh
+        - local:/local
     entrypoint:
       - /bin/sh
+
+volumes:
+
+  keys:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: $HOME/.ssh
+
+  local:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: $PWD

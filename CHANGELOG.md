@@ -1,6 +1,11 @@
 # Changelog
 
 
+## [3.9.2] - 2019-04-10
+
+* Changed: New Alpine base version
+* Changed: Edited compose file 
+* 
 ## [3.7.0.1] - 2018-01-01
 
 * Changed: New Alpine base version

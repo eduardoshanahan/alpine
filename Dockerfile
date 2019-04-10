@@ -1,8 +1,7 @@
-FROM alpine:3.7
+FROM alpine:3.9.2
 
 LABEL maintainer "Eduardo Shanahan <contact@eduardoshanahan.com>"
 
-RUN apk update \
-    && apk upgrade
+RUN apk update
 
 ENTRYPOINT ["/bin/sh"]
