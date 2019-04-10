@@ -19,6 +19,19 @@ Or with Docker Compose
 ```
 docker-compose run --rm shell
 ```
+
+You can also run all from compose:
+
+```
+docker-compose up
+```
+
+and attach to the container:
+
+```
+docker attach es_shell_alpine
+```
+
 ## Building an image in Docker Hub
 
 If for any reason the tagged build fails, you can fire a fresh one running
