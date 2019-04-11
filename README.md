@@ -8,6 +8,14 @@ A basic Docker image based in Alpine. I am using this as a root for my other ima
 docker build . -t eduardoshanahan/alpine:latest
 ```
 
+The script
+
+```
+./build.sh
+```
+
+will do the same and create also a build with the version number contained in version.json.
+
 ## Running an interactive test
 
 ```
