@@ -1,18 +1,47 @@
+echo 'Checking Docker image name'
+IMAGE_NAME=$(cat version.json | grep imageName | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]')
+echo 'Image name is '$IMAGE_NAME
+
 echo 'Preparing version number'
-IMAGE_VERSION=$(cat version.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]')
-echo 'New version is '$IMAGE_VERSION
+VERSION_NUMBER=$(cat version.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]')
+echo 'New version is '$VERSION_NUMBER
 
-echo 'Pushing to bitbucket'
-git push bitbucket
+PUSH_TO_BITBUCKET=$(cat version.json | grep pushToBitbucket | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]')
+echo 'Push to Bitbucket: '$PUSH_TO_BITBUCKET
 
-echo 'Pushing to github'
-git push github
+PUSH_TO_GITHUB=$(cat version.json | grep pushToGithub | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]')
+echo 'Push to Github: '$PUSH_TO_GITHUB
 
-echo 'Creating new tag '$IMAGE_VERSION
-git tag -f $IMAGE_VERSION
+if [[ $PUSH_TO_BITBUCKET == yes ]];
+then
+    echo 'Pushing to Bitbucket'
+    git push bitbucket
+else
+    echo 'Not pushing to Bitbucket'
+fi
 
-echo 'Pushing tags to bitbucket'
-git push bitbucket -f --tags
+if [ -z ${PUSH_TO_GITHUB+x} ];
+then
+    echo 'Pushing to Github'
+    git push github
+else
+    echo 'Not pushing to Github'
+fi
 
-echo 'Pushing tags to github'
-git push github -f --tags
+if test -z "$VERSION_NUMBER" 
+then
+    echo 'Creating new tag '$VERSION_NUMBER
+    git tag -f $VERSION_NUMBER
+
+    if test -z "$PUSH_TO_BITBUCKET"
+    then
+        echo 'Pushing tags to bitbucket'
+        git push bitbucket -f --tags
+    fi
+
+    if test -z "$PUSH_TO_GITHUB"
+    then
+        echo 'Pushing tags to github'
+        git push github -f --tags
+    fi
+fi

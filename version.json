@@ -1,3 +1,5 @@
 {
-    "version": "3.9.2"
+    "imageName": "alpine",
+    "version": "3.9.2",
+    "pushToBitbucket": "yes"
 }
